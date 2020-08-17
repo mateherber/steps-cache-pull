@@ -189,6 +189,8 @@ func main() {
 		}
 		cacheURI = downloadURL
 
+		log.Infof("%s", downloadURL)
+
 		cacheReader, err = performRequest(downloadURL)
 		if err != nil {
 			failf("Failed to perform cache download request: %s", err)
